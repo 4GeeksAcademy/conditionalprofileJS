@@ -37,21 +37,33 @@ function render(variables = {}) {
     variables.lastName ? variables.lastName : "boilett"
   }</h1>
           <h2>${variables.role ? variables.role : "Web Developer"}</h2>
-          <h3>${variables.city ? variables.city : "Miami, USA"}</h3>
-          <h4>${variables.country ? variables.country : " "}<h4>
+          <h3>${variables.city ? variables.city : "Miami"},${
+    variables.country ? variables.country : " "
+  }</h3>
           <ul class=${variables.socialMediaPosition}> 
-          <li><a href="https://twitter.com/4geeksacademy"> ${
-            variables.twitter ? variables.twitter : " "
-          }<i class="fab fa-twitter"></i></a></li>
-          <li><a href="https://github.com/4geeksacademy"> ${
-            variables.github ? variables.github : " "
-          }<i class="fab fa-github"></i></a></li>
-          <li><a href="https://linkedin.com/school/4geeksacademy"> ${
-            variables.linkedin ? variables.linkedin : " "
-          }<i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://instagram.com/4geeksacademy"> ${
-            variables.instagram ? variables.instagram : " "
-          }<i class="fab fa-instagram"></i></a></li>    
+          <li><a href=${
+            variables.twitter
+              ? "https://twitter.com/" + variables.twitter
+              : "https://twitter.com/4geeksacademy "
+          }> <i class="fab fa-twitter"></i></a></li>
+
+          <li><a href= ${
+            variables.github
+              ? "https://github.com/" + variables.github
+              : "https://github.com/4geeksacademy"
+          }> 
+            <i class="fab fa-github"></i></a></li>
+
+          <li><a href= ${
+            variables.linkedin
+              ? "https://linkedin.com/school/" + variables.linkedin
+              : "https://linkedin.com/school/4geeksacademy"
+          }> <i class="fab fa-linkedin"></i></a></li>
+          <li><a href=  ${
+            variables.instagram
+              ? "https://instagram.com/" + variables.instagram
+              : "https://instagram.com/4geeksacademy"
+          }><i class="fab fa-instagram"></i></a></li>    
           </ul>
          
         </div>
